@@ -1,5 +1,19 @@
 # MinTIC Universidad El Bosque.
 
+(EN)
+
+* 2nd Cycle: Basic programming
+
+  * Develop individually an object-oriented program in Java, single user, to solve the requirements posed by a third party, using a relational   database, with an MVC architecture and with a graphical interface.
+  * Design and use a simple relational database using SQL, and connect it from a program using JDBC
+  * Design an application using objects, expressing this design with a UML class diagram, with use case diagrams, and with a basic user story schema.
+  * Design and run a set of unit tests for a program
+  * Understand and use the concepts of interface and inheritance as reuse mechanisms
+  * Use an MVC architecture to decouple business logic from the user interface
+  * Use libraries and frameworks that support software development
+
+
+
 (ES)
 
 * Ciclo 2: Programación básica
