@@ -95,7 +95,9 @@ public class App {
         float radio;
         Scanner leer = new Scanner(System.in);
         System.out.println("Digite el radio: ");
-        radio
+        radio = leer.nextFloat();
+        area = radio * radio * (float)Math.PI;
+
     }
 
 }
