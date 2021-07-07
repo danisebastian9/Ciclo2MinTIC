@@ -4,7 +4,19 @@ public class App {
     public static void main(String[] args) throws Exception {
         uso_if();
         float_promedio();
-
+        char letra;
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Digite la letra: ");
+        letra = leer.next().charAt(0);
+        switch(letra){
+            case 'a': case 'A': System.out.println("Avion");
+            case 'e': case 'E': System.out.println("Elefante");
+            case 'i': case 'I': System.out.println("Iglesia");
+            case 'o': case 'O': System.out.println("Oso");
+            case 'u': case 'U': System.out.println("Uvas");
+            default: System.out.println("No es Vocal");
+            
+        }
 
     }
     // Aqui van todos los procedicimientos o funciones
@@ -21,9 +33,6 @@ public class App {
             System.out.println("El numero es IMPAR");    
         leer.close();
         // Cuando es mas de una instruccion es necesaria las llaves
-        
-
-
     }
 
     public static void float_promedio(){
@@ -38,7 +47,7 @@ public class App {
         nota2 = leer.nextFloat();
         System.out.println("Digite la nota # 3: ");
         nota3 = leer.nextFloat();
-
+        
         promedio = (nota1 + nota2 + nota3) / 3;
         System.out.println("El estudiante "+nombre+" tiene el promedio"+promedio+"");
     }
