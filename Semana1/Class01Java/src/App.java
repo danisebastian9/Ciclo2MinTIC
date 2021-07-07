@@ -8,15 +8,21 @@ public class App {
         Scanner leer = new Scanner(System.in);
         System.out.println("Digite la letra: ");
         letra = leer.next().charAt(0);
+        letra = Character.toUpperCase(letra);
         switch(letra){
-            case 'a': case 'A': System.out.println("Avion");
-            case 'e': case 'E': System.out.println("Elefante");
-            case 'i': case 'I': System.out.println("Iglesia");
-            case 'o': case 'O': System.out.println("Oso");
-            case 'u': case 'U': System.out.println("Uvas");
-            default: System.out.println("No es Vocal");
-            
+            case 'a': case 'A':System.out.println("Avion");
+            break;
+            case 'e': System.out.println("Elefante");
+            break;
+            case 'i': System.out.println("Iglesia");
+            break;
+            case 'o': System.out.println("Oso");
+            break;
+            case 'u': System.out.println("Uvas");
+            break;
+            default: System.out.println("No es Vocal");   
         }
+
 
     }
     // Aqui van todos los procedicimientos o funciones
@@ -48,7 +54,7 @@ public class App {
         System.out.println("Digite la nota # 3: ");
         nota3 = leer.nextFloat();
         
-        promedio = (nota1 + nota2 + nota3) / 3;
+        float promedio = (nota1 + nota2 + nota3)/ 3;
         System.out.println("El estudiante "+nombre+" tiene el promedio"+promedio+"");
     }
 
