@@ -3,9 +3,9 @@ import java.lang.Math;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // uso_if();
-        // float_promedio();
-        // uso_char();
+        uso_if();
+        float_promedio();
+        uso_char();
         
         int opcion;
         float area = 0;
@@ -13,14 +13,14 @@ public class App {
             opcion = seleccionar_menu();
             switch(opcion) {
                 case 1: area = calcular_circulo();
-                System.out.println("Area del Circulo: " + area);
-                break;
+                        System.out.println("Area del Circulo: " + area);
+                        break;
                 case 2: area = calcular_triangulo();
-                System.out.println("Area del Triangulo: " + area);
-                break;
+                        System.out.println("Area del Triangulo: " + area);
+                        break;
                 case 3: area = calcular_rectangulo();
-                System.out.println("Area del Rectangulo: " + area);
-                break;
+                        System.out.println("Area del Rectangulo: " + area);
+                        break;
                 case 4: System.exit(0);
                 break;
             } 
@@ -29,7 +29,7 @@ public class App {
     // Aqui van todos los procedicimientos o funciones
     public static void uso_if(){
         System.out.println("Digite el numero");
-        Scanner leer = new Scanner(System.in);
+        Scanner leer = extracted();
         int numero;
         numero = leer.nextInt();
         if (numero == 0) 
@@ -38,14 +38,17 @@ public class App {
             System.out.println("El numero es PAR");
          else
             System.out.println("El numero es IMPAR");    
-        leer.close();
         // Cuando es mas de una instruccion es necesaria las llaves
+    }
+    private static Scanner extracted() {
+        Scanner leer = new Scanner(System.in);
+        return leer;
     }
 
     public static void float_promedio(){
         String nombre = new String();
         float nota1, nota2, nota3, promedio;
-        Scanner leer = new Scanner(System.in);
+        Scanner leer = extracted();
         System.out.println("Digite el nombre del estudiante: ");
         nombre = leer.next();
         System.out.println("Digite la nota # 1: ");
@@ -57,15 +60,14 @@ public class App {
         
         promedio = (nota1 + nota2 + nota3)/ 3;
         System.out.println("El estudiante " + nombre + " tiene el promedio: " + promedio);
-        leer.close();
     }
 
     public static void uso_char(){
         char letra;
-        Scanner leer = new Scanner(System.in);
+        Scanner leer = extracted();
         System.out.println("Digite la letra: ");
         letra = leer.next().charAt(0);
-        letra = Character.toUpperCase(letra);
+        letra = Character.toLowerCase(letra);
         switch(letra){
             case 'a': case 'A':System.out.println("Avion");
             break;
@@ -79,14 +81,13 @@ public class App {
             break;
             default: System.out.println("No es Vocal");   
         }
-        leer.close();
         // tmp = Integer.toString(33);  / Lo convierte de entero a String "33"
         // num = Integer.parseInt("33"); / Convierte un string a INT
     }
 
     public static int seleccionar_menu(){
         int opc;
-        Scanner leer = new Scanner(System.in);
+        Scanner leer = extracted();
         System.out.println("MENU PRINCIPAL ");
         System.out.println("1. Calcular area Circulo ");
         System.out.println("2. Calcular area Triangulo");
@@ -94,41 +95,35 @@ public class App {
         System.out.println("4. Salir");
         System.out.println("Seleccione su opcion -> ");
         opc = leer.nextInt();
-        leer.close();
         return opc;
 
     }
     public static float calcular_circulo(){
         float radio, area;
-        Scanner leer = new Scanner(System.in);
+        Scanner leer = extracted();
         System.out.println("Digite el radio: ");
         radio = leer.nextFloat();
         area = radio * radio * (float)Math.PI;
-        leer.close();
         return area;
     }
     public static float calcular_triangulo(){
         float base, altura, area;
-        Scanner leer = new Scanner(System.in);
+        Scanner leer = extracted();
         System.out.println("Digite la base: ");
         base = leer.nextFloat();
         System.out.println("Digite la altura: ");
         altura = leer.nextFloat();
         area = (base * altura) / 2; 
-        leer.close();
         return area;
     }
     public static float calcular_rectangulo(){
         float base, altura, area;
-        Scanner leer = new Scanner(System.in);
+        Scanner leer = extracted();
         System.out.println("Digite la base: ");
         base = leer.nextFloat();
         System.out.println("Digite la altura: ");
         altura = leer.nextFloat();
         area = (base * altura); 
-        leer.close();
         return area;
     }
-
-
 }
