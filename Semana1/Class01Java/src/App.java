@@ -78,6 +78,8 @@ public class App {
             default: System.out.println("No es Vocal");   
         }
         leer.close();
+        // tmp = Integer.toString(33);  / Lo convierte de entero a String "33"
+        // num = Integer.parseInt("33"); / Convierte un string a INT
     }
 
     public static int seleccionar_menu(){
