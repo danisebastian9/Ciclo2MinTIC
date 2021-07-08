@@ -8,7 +8,13 @@ public class App {
         uso_char();
         uso_funciones_doWhile();
         // Genere los primeros 10 pares y sumelos
-        
+        int par, suma, cant_pares;
+        par = 2; 
+        suma = 0;
+        for ( cant_pares = 0 ; cant_pares <= 10; cant_pares++){
+            suma += par;
+            par += 2;
+        }
 
 
     }
