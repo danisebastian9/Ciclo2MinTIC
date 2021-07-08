@@ -77,6 +77,7 @@ public class App {
             break;
             default: System.out.println("No es Vocal");   
         }
+        leer.close();
     }
 
     public static int seleccionar_menu(){
