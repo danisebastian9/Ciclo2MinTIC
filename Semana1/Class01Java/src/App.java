@@ -6,7 +6,7 @@ public class App {
         // uso_if();
         // float_promedio();
         // uso_char();
-
+        
         int opcion;
         float area = 0;
         do {
@@ -24,8 +24,7 @@ public class App {
                 case 4: System.exit(0);
                 break;
             } 
-        } while (opcion != 4);
-
+        } while(opcion != 4);
     }
     // Aqui van todos los procedicimientos o funciones
     public static void uso_if(){
