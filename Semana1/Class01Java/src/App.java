@@ -7,15 +7,11 @@ public class App {
         float_promedio();
         uso_char();
         uso_funciones_doWhile();
-        // Genere los primeros 10 pares y sumelos
-        int par, suma, cant_pares;
-        par = 2; 
-        suma = 0;
-        for ( cant_pares = 0 ; cant_pares <= 10; cant_pares++){
-            suma += par;
-            par += 2;
-        }
+        use_for();
 
+        // Genere las tablas de multiplicar 1 al 5
+        // Al imprimirlas despues de la linea que multiplique x num multiplos de 7 agregar doble linea en blanco.
+        
 
     }
     // Aqui van todos los procedicimientos o funciones
@@ -138,4 +134,16 @@ public class App {
         area = (base * altura); 
         return area;
     }
+
+    public static void use_for(){
+        // Genere los primeros 10 pares y sumelos
+        int par, suma, cant_pares;
+        par = 2; 
+        suma = 0;
+        for ( cant_pares = 0 ; cant_pares <= 10; cant_pares++){
+            suma += par;
+            par += 2;
+        }
+    }
+
 }
