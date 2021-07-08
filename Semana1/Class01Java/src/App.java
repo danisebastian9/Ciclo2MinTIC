@@ -1,10 +1,11 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        uso_if();
-        float_promedio();
-        uso_char();
+        // uso_if();
+        // float_promedio();
+        // uso_char();
 
         int opcion;
         float area = 0;
@@ -94,16 +95,41 @@ public class App {
         System.out.println("4. Salir");
         System.out.println("Seleccione su opcion -> ");
         opc = leer.nextInt();
+        leer.close();
         return opc;
 
     }
     public static float calcular_circulo(){
-        float radio;
+        float radio, area;
         Scanner leer = new Scanner(System.in);
         System.out.println("Digite el radio: ");
         radio = leer.nextFloat();
         area = radio * radio * (float)Math.PI;
-
+        leer.close();
+        return area;
     }
+    public static float calcular_triangulo(){
+        float base, altura, area;
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Digite la base: ");
+        base = leer.nextFloat();
+        System.out.println("Digite la altura: ");
+        altura = leer.nextFloat();
+        area = (base * altura) / 2; 
+        leer.close();
+        return area;
+    }
+    public static float calcular_rectangulo(){
+        float base, altura, area;
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Digite la base: ");
+        base = leer.nextFloat();
+        System.out.println("Digite la altura: ");
+        altura = leer.nextFloat();
+        area = (base * altura); 
+        leer.close();
+        return area;
+    }
+
 
 }
