@@ -42,7 +42,7 @@ public class App {
 
     public static void float_promedio(){
         String nombre = new String();
-        float nota1, nota2, nota3;
+        float nota1, nota2, nota3, promedio;
         Scanner leer = new Scanner(System.in);
         System.out.println("Digite el nombre del estudiante: ");
         nombre = leer.next();
@@ -53,8 +53,9 @@ public class App {
         System.out.println("Digite la nota # 3: ");
         nota3 = leer.nextFloat();
         
-        float promedio = (nota1 + nota2 + nota3)/ 3;
-        System.out.println("El estudiante "+nombre+" tiene el promedio"+promedio+"");
+        promedio = (nota1 + nota2 + nota3)/ 3;
+        System.out.println("El estudiante " + nombre + " tiene el promedio: " + promedio);
+        leer.close();
     }
 
     public static void uso_char(){
