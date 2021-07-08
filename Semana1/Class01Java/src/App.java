@@ -6,25 +6,11 @@ public class App {
         uso_if();
         float_promedio();
         uso_char();
+        uso_funciones_doWhile();
+        // Genere los primeros 10 pares y sumelos
         
-        int opcion;
-        float area = 0;
-        do {
-            opcion = seleccionar_menu();
-            switch(opcion) {
-                case 1: area = calcular_circulo();
-                        System.out.println("Area del Circulo: " + area);
-                        break;
-                case 2: area = calcular_triangulo();
-                        System.out.println("Area del Triangulo: " + area);
-                        break;
-                case 3: area = calcular_rectangulo();
-                        System.out.println("Area del Rectangulo: " + area);
-                        break;
-                case 4: System.exit(0);
-                break;
-            } 
-        } while(opcion != 4);
+
+
     }
     // Aqui van todos los procedicimientos o funciones
     public static void uso_if(){
@@ -83,6 +69,26 @@ public class App {
         }
         // tmp = Integer.toString(33);  / Lo convierte de entero a String "33"
         // num = Integer.parseInt("33"); / Convierte un string a INT
+    }
+    public static void uso_funciones_doWhile(){
+        int opcion;
+        float area = 0;
+        do {
+            opcion = seleccionar_menu();
+            switch(opcion) {
+                case 1: area = calcular_circulo();
+                        System.out.println("Area del Circulo: " + area);
+                        break;
+                case 2: area = calcular_triangulo();
+                        System.out.println("Area del Triangulo: " + area);
+                        break;
+                case 3: area = calcular_rectangulo();
+                        System.out.println("Area del Rectangulo: " + area);
+                        break;
+                case 4: System.exit(0);
+                break;
+            } 
+        } while(opcion != 4);
     }
 
     public static int seleccionar_menu(){
