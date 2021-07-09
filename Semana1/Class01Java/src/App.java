@@ -9,19 +9,6 @@ public class App {
         uso_funciones_doWhile();
         use_for();
 
-        // Genere las tablas de multiplicar 1 al 5
-        // Al imprimirlas despues de la linea que multiplique x num multiplos de 7 agregar doble linea en blanco.
-        int tabla, multiplo;
-        Scanner leer = extracted();
-        System.out.println("Digite de que numero desea la tabla: ");
-        tabla = leer.nextInt();
-        System.out.println("Digite el numero para doble linea deseado: ");
-        multiplo = leer.nextInt();
-        for(int i = 1; i<=10; i++){
-            System.out.println(tabla + " X " + i + " = " + tabla * i);
-            if ((tabla * i) % multiplo == 0 )
-                System.out.println(" ");
-        }
 
     }
     // Aqui van todos los procedicimientos o funciones
@@ -153,6 +140,22 @@ public class App {
         for ( cant_pares = 0 ; cant_pares <= 10; cant_pares++){
             suma += par;
             par += 2;
+        }
+    }
+
+    public static void multiplos_exer(){
+                // Genere las tablas de multiplicar 1 al 5
+        // Al imprimirlas despues de la linea que multiplique x num multiplos de 7 agregar doble linea en blanco.
+        int tabla, multiplo;
+        Scanner leer = extracted();
+        System.out.println("Digite de que numero desea la tabla: ");
+        tabla = leer.nextInt();
+        System.out.println("Digite el numero para doble linea deseado: ");
+        multiplo = leer.nextInt();
+        for(int i = 1; i<=10; i++){
+            System.out.println(tabla + " X " + i + " = " + tabla * i);
+            if ((tabla * i) % multiplo == 0 )
+                System.out.println(" ");
         }
     }
 
