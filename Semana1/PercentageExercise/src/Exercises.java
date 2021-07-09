@@ -3,22 +3,10 @@ import java.util.Scanner;
 public class Exercises {
     public static void main(String[] args) throws Exception {
         porcentageExercise();
-        
-        int num1 = 0, num2 = 0;
-        Scanner ingreso = ingresoDatos();
-        num1 = Integer.parseInt(ingreso.nextLine());
-        num2 = Integer.parseInt(ingreso.nextLine());
-
-        if(num1 > num2){
-            System.out.println(num1 + "Es mayor que" + num2);
-        } else if(num2 > num1){
-            System.out.println(num2 + "Es mayor que" + num1);
-        } else{
-            System.out.println(num2 + "Es igual que" + num1);
-        }
+        mayorYMenorQue();
 
 
-    }
+    } // Cierre del Main
 
     public static void porcentageExercise(){
         Scanner ingreso = ingresoDatos();
@@ -39,8 +27,26 @@ public class Exercises {
         System.out.println("El porcentaje de mujeres es: "+porcentMujeres+"%");
     }
 
+    private static void mayorYMenorQue() {
+        int num1 = 0, num2 = 0;
+        Scanner ingreso = ingresoDatos();
+        System.out.println("Ingrese numero 1: ");
+        num1 = Integer.parseInt(ingreso.nextLine());
+        System.out.println("Ingrese numero 2: ");
+        num2 = Integer.parseInt(ingreso.nextLine());
+
+        if(num1 > num2){
+            System.out.println(num1 + " Es mayor que " + num2);
+        } else if(num2 > num1){ // Se puede usar sin llaves si es solo una linea. 
+            System.out.println(num2 + " Es mayor que " + num1);
+        } else{
+            System.out.println(num2 + " Es igual que " + num1);
+        }
+
+    }
+
     private static Scanner ingresoDatos() {
         Scanner ingreso = new Scanner(System.in);
         return ingreso;
-    }
-}
+    } // Cierre del metodo - Metodo = Funcion
+}// Cierre de la Clase
