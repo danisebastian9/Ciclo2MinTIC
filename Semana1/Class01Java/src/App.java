@@ -8,7 +8,7 @@ public class App {
         uso_char();
         uso_funciones_doWhile();
         use_for();
-
+        multiplos_exer();
 
     }
     // Aqui van todos los procedicimientos o funciones
