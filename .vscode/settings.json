@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
+        "Semana1/triangulo/src",
         "Semana1/PercentageExercise/src",
-        "Semana1/triangulo/src"
+        "Semana1"
     ]
 }
