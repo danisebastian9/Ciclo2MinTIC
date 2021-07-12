@@ -28,6 +28,7 @@ public class triangulo {
         }else{
             System.out.println("El triangulo es escaleno");
         }
+        ingreso.close();
     }
 
 }
