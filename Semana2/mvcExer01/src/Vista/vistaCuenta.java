@@ -15,8 +15,14 @@ public class vistaCuenta {
     
     
     public String capturaTipo(){
+        System.out.println("Digite Tipo de Cuenta");
         this.tipoCuenta = ingreso.nextLine();
-        return tipoCuenta;
+        while(!"ahorros".equals(this.tipoCuenta) && !"credito".equals(this.tipoCuenta) ){
+            System.out.println("Tipo de cuenta invalida. Ingrese ahorros o credito");
+            System.out.println("Digite Tipo de Cuenta");
+            this.tipoCuenta = ingreso.nextLine();
+        }
+        return this.tipoCuenta;
     }
     
     public double capturaValor(){
@@ -34,26 +40,36 @@ public class vistaCuenta {
         System.out.println("1. Crear Cuenta\n2. Consignar\n3. Retirar\n4. Saldo Actual\n5. Mostrar Saldo Minimo\n6.Capacidad Credito");
         System.out.println("Ingrese la opcion: ");
         this.opcion = ingreso.nextByte();
-        switch(opcion){
-            case 1:
-                return this.opcion;
-            case 2: 
-                return this.opcion;
-            case 3: 
-                return this.opcion;
-            case 4: 
-                return this.opcion;
-            case 5: 
-                return this.opcion;
-            case 6: 
-                return this.opcion;
-            default: 
-                System.out.println("Opcion invalida");
-                this.opcion = 0;
-                return this.opcion;
-                
-            
+        
+        while(!(this.opcion >= 1 && this.opcion <=6)){
+            System.out.println("Opcion invalida");
+            System.out.println("1. Crear Cuenta\n2. Consignar\n3. Retirar\n4. Saldo Actual\n5. Mostrar Saldo Minimo\n6.Capacidad Credito");
+            System.out.println("Ingrese la opcion: ");
+            this.opcion = ingreso.nextByte();
         }
+        switch(opcion){
+            case 1 -> {
+                return this.opcion;
+            } 
+            case 2 -> {
+                return this.opcion;
+            } 
+            case 3 -> {
+                return this.opcion;
+            } 
+            case 4 -> {
+                return this.opcion;
+            } 
+            case 5 -> {
+                return this.opcion;
+            } 
+            case 6 -> {
+                return this.opcion;
+            }
+            default -> {                  
+            }
+        }
+        return this.opcion;    
     }
     
 }
