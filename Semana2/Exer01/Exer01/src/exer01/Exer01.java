@@ -27,7 +27,7 @@ public class Exer01 {
         num = ingreso.nextInt();
         if (num > 1){
             for(int i=1; i <= num ; i++ ){
-                System.out.println("Manejando for..");
+                System.out.println("Manejando for...");
             }
         }
     }
