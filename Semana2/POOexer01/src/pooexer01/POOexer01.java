@@ -1,21 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pooexer01;
 
-/**
- *
- * @author sebas
- */
+import java.util.Scanner;
+
 public class POOexer01 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        String color;
+        // Instanciar clase automovil
+        Automovil miCarro = new Automovil();
+        
+        miCarro.marca = "Brilliance";
+        miCarro.estado = "Detenido";
+        miCarro.color = "Negro";
+        miCarro.ruedas = 4;
+        
+        System.out.println("Mi carro es "+ miCarro.color);
+        Scanner ingreso = new Scanner(System.in);
+        color = ingreso.nextLine();
+        String nuevoColor = miCarro.modificaColor(color);
+        System.out.println("Mi carro nuevo color es "+ miCarro.color);
+        miCarro.arrancar();
+        System.out.println("Estado mi carro "+ miCarro.estado);
+        
+        Automovil lucyCarro = new Automovil();
+        
+        lucyCarro.color = "Rojo";
+        lucyCarro.marca = "Renault";
+        
+        System.out.println("El carro de Lucy es "+ lucyCarro.color);
     }
     
 }
