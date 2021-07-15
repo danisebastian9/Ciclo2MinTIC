@@ -1,5 +1,8 @@
+import View.viewServicios;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        viewServicios principal = new viewServicios();
+        principal.conectarControlador();
     }
 }
