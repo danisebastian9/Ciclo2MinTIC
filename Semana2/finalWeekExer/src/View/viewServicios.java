@@ -32,7 +32,7 @@ public class viewServicios {
 
     public void connectController(){
         controllerServicios cC = new controllerServicios();
-        cC.control;
+        cC.control();
     }
 
 }

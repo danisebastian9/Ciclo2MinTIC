@@ -6,7 +6,7 @@ public class App {
 
         
         viewServicios principal = new viewServicios();
-        principal.conectarControlador();
+        principal.connectController();
     }
 
 
