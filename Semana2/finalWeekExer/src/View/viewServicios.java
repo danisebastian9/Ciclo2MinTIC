@@ -18,6 +18,16 @@ public class viewServicios {
         return servicioPub;
     }
 
+    public void servicioPagar(){
+        if(servicioPub == 1){
+            System.out.println("Pago de Servicio de Energia");
+        } else if(servicioPub == 2){
+            System.out.println("Pago de Servicio de Acueducto");
+        } else if(servicioPub == 3){
+            System.out.println("Pago de Servicio de Gas Natural");
+        }
+    }
+
     public int capturaEstrato(){
         System.out.println("Estrato del inmueble:");
         this.estrato = ingreso.nextInt();

@@ -15,13 +15,13 @@ public class controllerServicios {
     modelServicios mS = new modelServicios();
     
     public void control(){
-        this.servicioPub = vS.capturarServPub();
-        this.estrato = vS.capturaEstrato();
-        this.consumo = vS.capturarConsumo();
-
-        while(this.servicioPub != 4){
+        do {
+            this.servicioPub = vS.capturarServPub();
             switch(this.servicioPub){
                 case 1, 2, 3 -> {
+                    vS.servicioPagar();
+                    this.estrato = vS.capturaEstrato();
+                    this.consumo = vS.capturarConsumo();
                     System.out.println("El consumo fue: "+ consumo);
                     System.out.println("Valor unidad: "+ mS.valorUnidad(servicioPub));
                     System.out.println("Estrato del inmueble: "+ estrato);
@@ -32,18 +32,19 @@ public class controllerServicios {
                         System.out.println("Descuento o sobrecosto: -"+ mS.descSobr(estrato));
                     }
                     System.out.println("Impuesto por infraestructura: "+ mS.impuestoDaños());
-                    System.out.println("TOTAL A PAGAR: "+ mS.totalFactura(estrato));
+                    System.out.println("TOTAL A PAGAR: "+ mS.totalFactura(estrato) +"\n");
                     break;
                 }
                 case 4 -> {
+                    System.out.println("Hasta Pronto");
                     System.exit(0);
-                }
-            }
-            this.servicioPub = vS.capturarServPub();
-            this.estrato = vS.capturaEstrato();
-            this.consumo = vS.capturarConsumo();
-        } 
 
+                }
+                default ->{
+                    System.out.println("Opcion invalida");
+                }
+            } 
+        } while(this.servicioPub >= 1 && this.servicioPub <= 4);
     }
     
 }

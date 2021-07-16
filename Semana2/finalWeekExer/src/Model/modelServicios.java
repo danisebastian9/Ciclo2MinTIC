@@ -5,20 +5,15 @@ public class modelServicios {
     public int servicioPub;
     public int estrato;
     public int consumo;
-    public int precioUnidad;
+    public double precioUnidad;
     public double desc;
     public double precioNeto;
     public double impuesto;
     public double totalPago;
 
 
-    // public modelServicios(int servicioPub, int estrato, int consumo) {
-    //     this.servicioPub = servicioPub;
-    //     this.estrato = estrato;
-    //     this.consumo = consumo;
-    // }
 
-    public int valorUnidad(int servicioPub){
+    public double valorUnidad(int servicioPub){
         if(servicioPub == 1){
             this.precioUnidad = 6200;
         } else if(servicioPub == 2){
