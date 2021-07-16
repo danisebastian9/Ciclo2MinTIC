@@ -12,11 +12,11 @@ public class modelServicios {
     public double totalPago;
 
 
-    public modelServicios(int servicioPub, int estrato, int consumo) {
-        this.servicioPub = servicioPub;
-        this.estrato = estrato;
-        this.consumo = consumo;
-    }
+    // public modelServicios(int servicioPub, int estrato, int consumo) {
+    //     this.servicioPub = servicioPub;
+    //     this.estrato = estrato;
+    //     this.consumo = consumo;
+    // }
 
     public double valorUnidad(int servicioPub){
         if(servicioPub == 1){
