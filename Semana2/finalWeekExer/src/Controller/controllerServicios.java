@@ -15,8 +15,8 @@ public class controllerServicios {
     modelServicios mS = new modelServicios();
     
     public void control(){
+        this.servicioPub = vS.capturarServPub();
         do {
-            this.servicioPub = vS.capturarServPub();
             switch(this.servicioPub){
                 case 1, 2, 3 -> {
                     vS.servicioPagar();
@@ -42,9 +42,12 @@ public class controllerServicios {
                 }
                 default ->{
                     System.out.println("Opcion invalida");
+                    break;
                 }
             } 
+            this.servicioPub = vS.capturarServPub();
         } while(this.servicioPub >= 1 && this.servicioPub <= 4);
-    }
+    } 
+    
     
 }
