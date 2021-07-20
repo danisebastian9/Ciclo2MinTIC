@@ -1,8 +1,8 @@
 public class Instrumento {
     
-    public String nombre;
-    public String origen;
-    public String referencia;
+    private String nombre;
+    private String origen;
+    private String referencia;
     private double precio; // encapsulamiento, un atributo solo se puede acceder desde su propia clase.
 
 
@@ -12,6 +12,32 @@ public class Instrumento {
 
     public double getPrecio(){  // Getter
         return precio;
+    }
+
+    
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getOrigen() {
+        return origen;
+    }
+
+    public void setOrigen(String origen) {
+        this.origen = origen;
+    }
+
+    public String getReferencia() {
+        return referencia;
+    }
+
+    public void setReferencia(String referencia) {
+        this.referencia = referencia;
     }
 
     public void afinar(){
