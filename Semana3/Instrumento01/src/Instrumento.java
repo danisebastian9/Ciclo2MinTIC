@@ -5,6 +5,12 @@ public class Instrumento {
     private String referencia;
     private double precio; // encapsulamiento, un atributo solo se puede acceder desde su propia clase.
 
+    public Instrumento(){}
+
+    public Instrumento(String name){
+        nombre = name;
+    }
+
 
     public void setprecio(double valor){ // Setter  
         precio = valor;

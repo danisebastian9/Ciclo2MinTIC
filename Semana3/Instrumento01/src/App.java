@@ -31,5 +31,13 @@ public class App {
         System.out.println("Referencia Ins2: " +ins2.getReferencia());
         System.out.println("Precio Ins2: " +ins2.getPrecio());
 
+
+        double iva = ins2.getPrecio() * 0.19; 
+        System.out.println("El iva a pagar es de: "+ iva);
+        
+
+        System.out.println("Ingrese el nombre del instrumento a crear: ");
+        Instrumento objeto1 = new Instrumento(x.nextLine());
+        System.out.println("Instrumento3: "+objeto1.getNombre());
     }
 }
