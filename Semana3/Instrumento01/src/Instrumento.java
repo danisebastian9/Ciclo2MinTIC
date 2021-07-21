@@ -60,6 +60,19 @@ public class Instrumento {
     public void afinar(){
         System.out.println("Afinando instrumento: "+nombre);
     }
+    
+    public void afinar(double descuento){
+        System.out.println("Afinando instrumento: "+nombre);
+        System.out.println("Valor del descuento: "+(precio - descuento));
+
+    }
+
+    public void afinar(double descuento, String color){
+        System.out.println("Afinando instrumento: "+nombre);
+        System.out.println("Valor del descuento: "+(precio - descuento));
+        System.out.println("Nuevo color "+ color);
+
+    }
 
     public void sonar(){
         System.out.println("Sonando instrumento: "+nombre);

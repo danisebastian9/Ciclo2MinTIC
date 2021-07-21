@@ -47,7 +47,9 @@ public class App {
 
         Instrumento objeto3 = new Instrumento("Bateria", "EEUU", "RF145", 1500000);
         System.out.println("Mi objeto No 3: "+objeto3.toString());
-
+        objeto3.afinar();
+        objeto3.afinar(20000);
+        objeto3.afinar(100000, "Azul");
     }
 
 }
