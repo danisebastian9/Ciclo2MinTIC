@@ -5,12 +5,16 @@ public class Instrumento {
     private String referencia;
     private double precio; // encapsulamiento, un atributo solo se puede acceder desde su propia clase.
 
-    public Instrumento(){}
+    public Instrumento(){} // Sobrecarga de constructores es tener mas de un constructor en la clase. 
 
     public Instrumento(String name){
         nombre = name;
     }
 
+    public Instrumento(String name, String origin){
+        this.nombre = name;
+        this.origen = origin;
+    }
 
     public void setprecio(double valor){ // Setter  
         precio = valor;

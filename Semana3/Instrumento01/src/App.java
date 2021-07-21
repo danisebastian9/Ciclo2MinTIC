@@ -39,5 +39,12 @@ public class App {
         System.out.println("Ingrese el nombre del instrumento a crear: ");
         Instrumento objeto1 = new Instrumento(x.nextLine());
         System.out.println("Instrumento3: "+objeto1.getNombre());
+
+
+        Instrumento objeto2 = new Instrumento("Piano","Alemania");
+        System.out.println("Instrumento4: "+objeto2.getNombre());
+        System.out.println("Origen ins 4: "+objeto2.getOrigen());
+
     }
+
 }
