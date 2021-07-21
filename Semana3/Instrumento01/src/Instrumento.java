@@ -16,6 +16,13 @@ public class Instrumento {
         this.origen = origin;
     }
 
+    public Instrumento(String nombre, String origen, String referencia, double precio) {
+        this.nombre = nombre;
+        this.origen = origen;
+        this.referencia = referencia;
+        this.precio = precio;
+    }
+
     public void setprecio(double valor){ // Setter  
         precio = valor;
     }
@@ -64,8 +71,8 @@ public class Instrumento {
 
     @Override
     public String toString() {
-        return "Instrumento [nombre=" + nombre + ", origen=" + origen + ", precio=" + precio + ", referencia="
-                + referencia + "]";
+        return "Instrumento: \nnombre=" + nombre + "\norigen=" + origen + "\nprecio=" + precio + "\nreferencia="
+                + referencia + "";
     }
 
 

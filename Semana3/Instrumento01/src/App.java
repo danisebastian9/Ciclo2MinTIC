@@ -45,6 +45,9 @@ public class App {
         System.out.println("Instrumento4: "+objeto2.getNombre());
         System.out.println("Origen ins 4: "+objeto2.getOrigen());
 
+        Instrumento objeto3 = new Instrumento("Bateria", "EEUU", "RF145", 1500000);
+        System.out.println("Mi objeto No 3: "+objeto3.toString());
+
     }
 
 }
