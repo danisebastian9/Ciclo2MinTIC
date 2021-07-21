@@ -62,6 +62,13 @@ public class Instrumento {
         System.out.println("Calibrando instrumento: "+nombre);
     }
 
+    @Override
+    public String toString() {
+        return "Instrumento [nombre=" + nombre + ", origen=" + origen + ", precio=" + precio + ", referencia="
+                + referencia + "]";
+    }
 
+
+    
 
 }
