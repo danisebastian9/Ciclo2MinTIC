@@ -1,6 +1,6 @@
 public class persona {
     
-    private String Nombre;
+    protected String Nombre; // Protegido y solo hijos o misma clase pueden acceder. 
     private String Apellidos;
     private int edad;
     
@@ -25,7 +25,7 @@ public class persona {
         return edad;
     }
 
-    
+
 
 
     

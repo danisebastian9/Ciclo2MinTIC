@@ -12,5 +12,8 @@ public class estudiante extends persona { // Hereda de persona
 
     }
 
-    
+    public void mostrarDatos(){
+        System.out.println("Nombre: "+ getNombre() + "\nApellidos: " + getApellidos() + "\nEdad: " + getEdad() + "\nCodigo: " + codigoEst + "\nNota Final: " + notaFinal);
+    }
+
 }
