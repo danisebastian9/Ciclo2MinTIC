@@ -5,6 +5,9 @@ public class App {
         System.out.println("Estudiante: "+ Pedro.Nombre);
         System.out.println("Apellidos: "+ Pedro.getApellidos());
         Pedro.mostrarDatos(); 
+        System.out.println(Pedro.aprobo());
+        Pedro.esMayor();
+
 
     }
 }

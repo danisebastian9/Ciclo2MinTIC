@@ -11,6 +11,14 @@ public class persona {
         this.edad = edad;
     }
 
+    public void esMayor(){
+        if(edad >= 0 && edad <= 17){
+            System.out.println("Es Menor de Edad");
+        } else {
+            System.out.println("Es Mayor de Edad");
+        }
+    }
+
 
     public String getNombre() {
         return Nombre;

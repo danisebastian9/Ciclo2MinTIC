@@ -16,4 +16,12 @@ public class estudiante extends persona { // Hereda de persona
         System.out.println("Nombre: "+ getNombre() + "\nApellidos: " + getApellidos() + "\nEdad: " + getEdad() + "\nCodigo: " + codigoEst + "\nNota Final: " + notaFinal);
     }
 
+    public String aprobo(){
+        if(notaFinal >= 3.5){
+            return ""+ getNombre() + "Aprobo";
+        } else {
+            return "" + getNombre() + "Reprobo";
+        }
+    }
+
 }
