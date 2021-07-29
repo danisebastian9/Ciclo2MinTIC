@@ -32,5 +32,10 @@ public class App {
             System.out.println(" .... " + nombres[i]);
         }
 
+        // For mejorado
+        for(String j: nombres){
+            System.out.println(" ....> " + j);
+        }
+
     }
 }
