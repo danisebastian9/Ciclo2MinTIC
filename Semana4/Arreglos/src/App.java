@@ -25,5 +25,12 @@ public class App {
             System.out.print(" - " + numero[i]);
         }
 
+
+        String nombres[] = {"Juan", "Maria", "Pedro", "Luisa", "Pepe", "Rosa", "Mateo", "Dominick"};
+
+        for(int i = 0; i<nombres.length; i++){ // recorrer un arrelo
+            System.out.println(" .... " + nombres[i]);
+        }
+
     }
 }
