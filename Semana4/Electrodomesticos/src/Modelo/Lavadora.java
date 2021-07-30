@@ -29,6 +29,12 @@ public class Lavadora extends Electrodomestico{
             precioBase += 50;
         }
     }
+
+    // @Override
+    // public String toString() {
+    //     return "Lavadora [carga=" + carga + "]";
+    // }
+    
     
 
 }

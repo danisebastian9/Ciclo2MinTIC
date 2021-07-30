@@ -14,6 +14,12 @@ public class Vista {
         return opcion;
     }
 
+    public int capturaTam(){
+        System.out.println("Ingrese cantidad de electrodomesticos a crear: ");
+        int tam = ingreso.nextInt();
+        return tam;
+    }
+
     public double capturaPrecioBase(){
         System.out.println("Ingrese Precio Base: ");
         double precio = ingreso.nextDouble();
