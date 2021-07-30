@@ -10,29 +10,56 @@ public class Control {
 
     public void Principal(){
 
-        byte op = view.mostrarMenu();
+        byte op1 = view.mostrarMenu2();
 
         int tamanio = view.capturaTam();
         Electrodomestico[] guardar = new Electrodomestico[tamanio];
 
-        for(int i = 0; i<guardar.length; i++){
-            switch(op){
+        while(op1>= 1 && op1 <= 3){
+            switch(op1){
                 case 1:
-                Lavadora lav = new Lavadora(view.capturaPrecioBase(), view.capturaColor(), view.capturaConsumo(), view.capturaPeso(), view.capturaCarga());
-                guardar[i] = lav;                lav.precioFinal();
-                System.out.println("Precio Final de Lavadora: "+ lav.getPrecioBase());
+                    for(int i = 0; i<guardar.length; i++){
+                        byte op2 = view.mostrarMenu();
+                        switch(op2){
+                            case 1:
+                            Lavadora lav = new Lavadora(view.capturaPrecioBase(), view.capturaColor(), view.capturaConsumo(), view.capturaPeso(), view.capturaCarga());
+                            guardar[i] = lav;                
+                            break;
+                            case 2:
+                            Television tv = new Television(view.capturaPrecioBase(), view.capturaColor(), view.capturaConsumo(), view.capturaPeso(), view.capturaResolucion(), view.capturaTdt());
+                            guardar[i] = tv;
+                            break;
+                    }
+                }
                 break;
                 case 2:
-                Television tv = new Television(view.capturaPrecioBase(), view.capturaColor(), view.capturaConsumo(), view.capturaPeso(), view.capturaResolucion(), view.capturaTdt());
-                guardar[i] = tv;
-                tv.precioFinal();
-                System.out.println("Precio Final de Television: "+ tv.getPrecioBase());
+                double sumaLavadoras = 0;
+                double sumaTvs = 0;
+                double sumaTotal = 0;
+    
+                for(Electrodomestico e: guardar){
+                    e.precioFinal();
+                    if(e instanceof Lavadora){ // Instanceof = compara si un objeto es de esa clase. 
+                        System.out.println("Lavadora " + e.getPrecioBase());
+                        sumaLavadoras += e.getPrecioBase();
+                    } else if(e instanceof Television) {
+                        System.out.println("Televisor " + e.getPrecioBase());
+                        sumaTvs += e.getPrecioBase();
+                    }
+                }
+                System.out.println("Suma de Lavadoras: " + sumaLavadoras);
+                System.out.println("Suma de Televisores: " + sumaTvs);
                 break;
-                case 3:
-                System.out.println("Hasta Pronto...");
+                case 3: 
                 System.exit(0);
+                break;
             }
+            op1 = view.mostrarMenu2();
         }
+
+
+
+
 
 
     }
