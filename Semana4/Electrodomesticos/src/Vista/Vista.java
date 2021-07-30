@@ -8,7 +8,7 @@ public class Vista {
     
     public byte mostrarMenu(){
         byte opcion;
-        System.out.println("1. Crear Lavadora \n2. Crear televisor \n3. Salir");
+        System.out.println("1. Crear Lavadora \n2. Crear televisor \n3. Sumar Precio Final \n4. Salir");
         System.out.println("Ingrese Opcion: ");
         opcion = ingreso.nextByte();
         return opcion;
