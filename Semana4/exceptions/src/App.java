@@ -29,14 +29,27 @@ public class App {
 
         int[] datos = new int[30];
         try{
-            datos[-5] = 45;
+            datos[5] = 45;
+            for(int i = 0;i < 50; i++){
+                System.out.println("Datos: " + datos[i]);
+            }
         }catch(Exception exptn){
             System.out.println("El indice esta fuera del tamaño del arreglo: " + exptn.getMessage());
+        }finally{
+            for(int i = 0;i < datos.length; i++){
+                System.out.println("datos: " + datos[i]);
         }
         System.out.println("Continua el programa... ");
 
-        
 
+
+        // public static void prueba() throw ArrayIndexOutOfBoundsException{
+        //     int[] datos = new int[30];
+        //     for(int i = 0;i < 50; i++){
+        //         System.out.println("Datos: " + datos[i]);
+        //     }
+        // }
 
     }
+}
 }
