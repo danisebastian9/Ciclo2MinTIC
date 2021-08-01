@@ -43,6 +43,11 @@ public class Inventario {
     }
 
 
-    
+    // public void listarProductos(){
+    //     for(Productos p:lista){
+
+    //     }
+    // }
       
+    
 }

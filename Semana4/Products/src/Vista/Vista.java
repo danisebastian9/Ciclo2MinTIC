@@ -1,5 +1,44 @@
 package Vista;
 
+import java.util.Scanner;
+
 public class Vista {
+
+    Scanner ingreso = new Scanner(System.in); 
     
+    public byte mostrarMenu(){
+        byte op = 0;
+
+        System.out.println("Menu inventario de Productos \n1. Crear Producto \n2. Buscar Producto \n3. Modificar Producto \n4. Eliminar Producto \n5. Listar Productos \n6. Salir \nOpcion: " );
+        op = ingreso.nextByte();
+        return op;
+    }
+
+    public String capturaRef(){
+        String ref = "";
+        ref = ingreso.next();
+        return ref;
+        
+    }
+
+    public String capturaNombre(){
+        String nom = "";
+        nom = ingreso.next();
+        return nom;
+
+    }
+
+    public long capturaPrecio(){
+        long pre = 0;
+        try{
+            pre = ingreso.nextLong();
+        }catch(Exception ex){
+            System.out.println("Error al ingresar el precio: " + ex.getMessage());
+        }
+        return pre;
+    }
+
+    public void imprimir(String mensaje){
+        System.out.println(mensaje);
+    }
 }
