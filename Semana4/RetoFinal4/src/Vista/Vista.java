@@ -22,9 +22,9 @@ public class Vista {
 
     public String capturaApellidos(){
         System.out.println("Ingresar apellidos:");
-        String ape = "";
-        ape = ingreso.next();
-        return ape;
+        String apellidos = "";
+        apellidos = ingreso.next();
+        return apellidos;
     }
 
     public String capturaFechaNac(){
