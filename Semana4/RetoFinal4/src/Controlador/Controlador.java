@@ -17,7 +17,7 @@ public class Controlador {
         while(opcion >= 1 && opcion <= 6){
             switch(opcion){
                 case 1:
-                vis.imprimir("Ingresar estudiante");
+                // vis.imprimir("Ingresar estudiante");
                 Estudiantes est = new Estudiantes(vis.capturaNombre(), vis.capturaApellidos(), vis.capturaFechaNac(), vis.capturaInstEmail(), vis.capturaPersEmail(), vis.capturaCelNum(), vis.capturaFijoNum(), vis.capturaPrograma());
                 lista.agregarEstudiante(est);
                 vis.imprimir("Se agregó el estudiante");

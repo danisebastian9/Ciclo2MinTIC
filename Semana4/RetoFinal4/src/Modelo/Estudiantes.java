@@ -25,6 +25,15 @@ public class Estudiantes {
     }
 
 
+    public Estudiantes(String instEmail, String persEmail, long celNum, long fijoNum, String progAcademico) {
+        this.instEmail = instEmail;
+        this.persEmail = persEmail;
+        this.celNum = celNum;
+        this.fijoNum = fijoNum;
+        this.progAcademico = progAcademico;
+    }
+
+
 
     public Estudiantes(String nombres, String apellidos, String fechaNacimiento, String instEmail, String persEmail,
             long celNum, long fijoNum, String progAcademico) {

@@ -25,7 +25,8 @@ public class Inventario {
         int contador = 0;
         for(Estudiantes est:lista){
             if(est.getInstEmail().equals(iEmail)){
-                lista.set(contador, new Estudiantes(perEmail, numCel, numFijo, prog));
+                // lista.set(contador, new Estudiantes(perEmail, numCel, numFijo, prog));
+                lista.set(contador, new Estudiantes(iEmail, perEmail, numCel, numFijo, prog));
             }
             contador++;
         }

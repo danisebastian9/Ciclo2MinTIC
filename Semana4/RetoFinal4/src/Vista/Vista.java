@@ -8,22 +8,23 @@ public class Vista {
 
     public byte mostrarMenu(){
         byte op = 0;
-        System.out.println("\nINSTITUTO LA FLORESTA \nSeleccione tarea a realizar: \n1. Ingresar estudiante \n2. Buscar estudiante \n3. Modificar estudiante \n4. Eliminar Estudiante \n5. Ver directorio de estudiantes \n6. Salir \nOpción:");
+        System.out.println("INSTITUTO LA FLORESTA \nSeleccione tarea a realizar: \n1. Ingresar estudiante \n2. Buscar estudiante \n3. Modificar estudiante \n4. Eliminar Estudiante \n5. Ver directorio de estudiantes \n6. Salir \nOpción:");
         op = ingreso.nextByte();
+        ingreso.nextLine();
         return op;
     }
 
     public String capturaNombre(){
         System.out.println("Ingresar nombres:");
-        String nom = "";
-        nom = ingreso.next();
-        return nom;
+        String nombres = " ";
+        nombres = ingreso.nextLine();
+        return nombres;
     }
 
     public String capturaApellidos(){
         System.out.println("Ingresar apellidos:");
-        String apellidos = "";
-        apellidos = ingreso.next();
+        String apellidos = " ";
+        apellidos = ingreso.nextLine();
         return apellidos;
     }
 
