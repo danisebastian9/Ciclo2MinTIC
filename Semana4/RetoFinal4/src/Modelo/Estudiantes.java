@@ -120,7 +120,7 @@ public class Estudiantes {
 
     public String mostrarProducto(){
         String mensaje = "";
-        mensaje = "Nombres: " + getNombres() + "\nApellidos: " + getApellidos() + "\nFecha de Nacimiento: " + getFechaNacimiento() + "\nCorreo Institucional: " + getInstEmail() + "\nCorreo Personal: " + getPersEmail() + "\nNumero Telefonico Celular: " + getCelNum() + "\nNumero Telefonico Fijo: " + getFijoNum() + "\nPrograma académico al cual pertenece: " + getProgAcademico();
+        mensaje = "Nombres: " + getNombres() + "\nApellidos: " + getApellidos() + "\nFecha nacimiento: " + getFechaNacimiento() + "\nCorreo institucional: " + getInstEmail() + "\nCorreo personal: " + getPersEmail() + "\nNúmero de teléfono celular: " + getCelNum() + "\nNúmero de teléfono fijo: " + getFijoNum() + "\nPrograma académico: " + getProgAcademico();
         return mensaje;
     }
 
