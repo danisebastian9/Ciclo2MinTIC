@@ -5,7 +5,12 @@ public class Productos {
     private String referencia;
     private String nombre;
     private long precio;
+
     
+    
+    public Productos() {
+    }
+
     public Productos(String referencia, String nombre, long precio) {
         this.referencia = referencia;
         this.nombre = nombre;
@@ -44,7 +49,7 @@ public class Productos {
     }
 
 
-    
+
 
     
 }

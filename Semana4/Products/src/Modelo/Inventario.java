@@ -42,12 +42,8 @@ public class Inventario {
         }
     }
 
+    public ArrayList<Productos> getLista() {
+        return lista;
+    }
 
-    // public void listarProductos(){
-    //     for(Productos p:lista){
-
-    //     }
-    // }
-      
-    
 }

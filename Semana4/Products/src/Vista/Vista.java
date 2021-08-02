@@ -15,6 +15,7 @@ public class Vista {
     }
 
     public String capturaRef(){
+        System.out.println("Ingrese referencia del producto");
         String ref = "";
         ref = ingreso.next();
         return ref;
@@ -22,6 +23,7 @@ public class Vista {
     }
 
     public String capturaNombre(){
+        System.out.println("Ingrese Nombre del producto");
         String nom = "";
         nom = ingreso.next();
         return nom;
@@ -29,6 +31,7 @@ public class Vista {
     }
 
     public long capturaPrecio(){
+        System.out.println("Ingrese Precio del producto");
         long pre = 0;
         try{
             pre = ingreso.nextLong();
