@@ -33,12 +33,10 @@ public class Inventario {
     }
 
     public void eliminarProducto(String ref){  // Metodo para Eliminar
-        int contador = 0;
         for(Productos p:lista){
             if(p.getReferencia().equals(ref)){
-                lista.remove(contador);
+                lista.remove(lista.indexOf(p));
             }
-            contador++;
         }
     }
 
