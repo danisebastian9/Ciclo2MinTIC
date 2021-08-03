@@ -27,13 +27,14 @@ public class Archivo {
 
     public void escribir(){
 
-        String texto = "Probando la escritura en archivos con Java";
+        String texto = "\nHaciendo prueba 4 de escritura";
         try {
-            FileWriter escritura = new FileWriter("src\\escribir31.txt");
+            //FileWriter escritura = new FileWriter("src\\escribir31.txt"); overwrites and creates
+            FileWriter escritura = new FileWriter("src\\escribir31.txt", true); //true = continue writing leaving existing data.      
             for(int i = 0; i < texto.length(); i++){
                 escritura.write(texto.charAt(i));
             }
-            
+
             escritura.close();
             
 
