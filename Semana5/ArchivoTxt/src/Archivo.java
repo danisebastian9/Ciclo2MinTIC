@@ -1,3 +1,4 @@
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -5,7 +6,7 @@ import java.io.IOException;
 
 public class Archivo {
     
-    public void leer(){
+    public void leer(){// Lectura desde archivo TXT
         
         try {
             FileReader arch = new FileReader("C:\\Users\\sebas\\Documents\\Development\\MinTic\\Ciclo2MinTIC\\Semana5\\ArchivoTxt\\src\\archivo31.txt");
@@ -25,7 +26,7 @@ public class Archivo {
     }
 
 
-    public void escribir(){
+    public void escribir(){ // Escritura o creacion en archivo TXT
 
         String texto = "\nHaciendo prueba 4 de escritura";
         try {
@@ -43,5 +44,24 @@ public class Archivo {
             e.printStackTrace();
         }
 
+    }
+
+
+    public void leer_buffer(){ // Leer con memoria temporal
+
+        try{
+            FileReader archivo = new FileReader("src\\escribir31.txt");
+
+            BufferedReader memo = new BufferedReader(archivo);
+            String linea = "";
+            while(linea != null){
+                linea = memo.readLine();
+                System.out.println(linea);
+            }
+            archivo.close();
+        }catch(IOException ex){
+            System.out.println("No se encontro el archivo, no se pudo leer...");
+            ex.printStackTrace();
+        }
     }
 }
