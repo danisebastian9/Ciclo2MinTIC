@@ -5,6 +5,8 @@ public class App {
         // prueba.escribir();
         // prueba.leer_buffer();
         Imagen img = new Imagen();
-        img.leerImagen();
+        img.copiarImagen(img.leerImagen());
+        // img.leerImagen();
+
     }
 }
