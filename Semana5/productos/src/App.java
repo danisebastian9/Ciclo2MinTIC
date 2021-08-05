@@ -24,5 +24,9 @@ public class App {
         } catch (IOException e) {
             //TODO: handle exception
         }
+
+        for(Productos p:Lista){
+            System.out.println(p.mostrarProducto());
+        }
     }
 }
