@@ -3,6 +3,8 @@ public class App {
         Archivo prueba = new Archivo();
         // prueba.leer();
         // prueba.escribir();
-        prueba.leer_buffer();
+        // prueba.leer_buffer();
+        Imagen img = new Imagen();
+        img.leerImagen();
     }
 }
