@@ -47,7 +47,7 @@ public class Archivo {
     }
 
 
-    public void leer_buffer(){ // Leer con memoria temporal
+    public void leer_buffer(){ // Leer con memoria temporal, linea a linea y no X/caracter
 
         try{
             FileReader archivo = new FileReader("src\\escribir31.txt");
@@ -56,7 +56,9 @@ public class Archivo {
             String linea = "";
             while(linea != null){
                 linea = memo.readLine();
-                System.out.println(linea);
+                if(linea != null){
+                    System.out.println(linea);
+                }
             }
             archivo.close();
         }catch(IOException ex){
