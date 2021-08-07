@@ -41,11 +41,8 @@ public class Inventario {
 
     public void eliminarProducto(String ref){  // Metodo para Eliminar
         lista = arch.leerArchivo(arch.getArchivo());
-        for(Productos p:lista){
-            if(p.getReferencia().equals(ref)){
-                lista.remove(lista.indexOf(p));
-            }
-        }
+        Productos p = this.buscarProducto(ref);
+        lista.remove(p);
         arch.escribirArchivo(lista, arch.getArchivo());
     }
 
