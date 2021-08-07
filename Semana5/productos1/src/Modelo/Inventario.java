@@ -12,11 +12,11 @@ public class Inventario {
 
     public void agregarProducto(Productos p){ // Metodo agregar a la lista
         lista.add(p);
-        arch.escribirArchivo(lista);
+        arch.escribirArchivo(lista, arch.getArchivo());
     }
 
     public Productos buscarProducto(String ref){ // Metodo buscar por referencia
-        lista = arch.leerArchivo();
+        lista = arch.leerArchivo(arch.getArchivo());
         Productos z = null; 
         for(Productos p:lista){
             if(p.getReferencia().equals(ref)){
@@ -28,7 +28,7 @@ public class Inventario {
     }
 
     public void modificarProducto(String ref, String nom, long pre){  // Metodo para Modificar
-        lista = arch.leerArchivo();
+        lista = arch.leerArchivo(arch.getArchivo());
         int contador = 0;
         for(Productos p:lista){
             if(p.getReferencia().equals(ref)){
@@ -36,17 +36,17 @@ public class Inventario {
             }
             contador++;
         }
-        arch.escribirArchivo(lista);
+        arch.escribirArchivo(lista, arch.getArchivo());
     }
 
     public void eliminarProducto(String ref){  // Metodo para Eliminar
-        lista = arch.leerArchivo();
+        lista = arch.leerArchivo(arch.getArchivo());
         for(Productos p:lista){
             if(p.getReferencia().equals(ref)){
                 lista.remove(lista.indexOf(p));
             }
         }
-        arch.escribirArchivo(lista);
+        arch.escribirArchivo(lista, arch.getArchivo());
     }
 
     public ArrayList<Productos> getLista() {
