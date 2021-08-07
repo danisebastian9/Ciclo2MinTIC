@@ -7,8 +7,12 @@ public class Inventario {
     //CRUD : Create, Read, Update, Delete
     public ArrayList<Productos> lista = new ArrayList<Productos>();
 
+    Archivo  arch = new Archivo();
+
+
     public void agregarProducto(Productos p){ // Metodo agregar a la lista
         lista.add(p);
+        arch.escribirArchivo(lista);
     }
 
     public Productos buscarProducto(String ref){ // Metodo buscar por referencia
