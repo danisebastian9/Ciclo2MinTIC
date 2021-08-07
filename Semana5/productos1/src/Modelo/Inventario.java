@@ -53,4 +53,9 @@ public class Inventario {
         return lista;
     }
 
+    public void setLista(ArrayList<Productos> lista) {
+        this.lista = lista;
+    }
+    
+
 }

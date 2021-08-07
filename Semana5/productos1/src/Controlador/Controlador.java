@@ -1,5 +1,6 @@
 package Controlador;
 
+import Modelo.Archivo;
 import Modelo.Inventario;
 import Modelo.Productos;
 import Vista.Vista;
@@ -8,6 +9,7 @@ public class Controlador {
     
     Vista vis = new Vista();
     Inventario lista = new Inventario();
+    Archivo  arch = new Archivo();
 
     public void Control(){
 
@@ -32,6 +34,7 @@ public class Controlador {
                     lista.eliminarProducto(vis.capturaRef());
                 break;
                 case 5 :
+                lista.setLista(arch.leerArchivo());;
                     for(Productos prods: lista.getLista()){
                         vis.imprimir(prods.mostrarProducto());
                     }
