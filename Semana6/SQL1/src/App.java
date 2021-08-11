@@ -5,5 +5,7 @@ public class App {
         // Enable MySQL and APACHE, 
         // Then through the browser go to localhost
         // Then to phpmyadmin in order to access the DB
+        // Disco local C > XAMPP
+        // testSQL DB created
     }
 }
