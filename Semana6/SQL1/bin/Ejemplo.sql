@@ -19,6 +19,11 @@ CREATE table libro(
 -- Estructura de la tabla
 describe libro;
 
+ALTER table libro add Precio int();
+
+-- eliminar tabla -- Elimina datos
+DROP table libro;
+
 -- DML - Lenguaje de manipulacion de datos - CRUD 
 
 -- DCL - Lenguaje de control de datos - Seguridad de los datos
