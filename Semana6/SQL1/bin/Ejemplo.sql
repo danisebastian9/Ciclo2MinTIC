@@ -1,0 +1,1 @@
+-- SQL - es el Lenguaje de consulta estructural
