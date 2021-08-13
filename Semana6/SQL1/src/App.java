@@ -7,5 +7,6 @@ public class App {
         // Then to phpmyadmin in order to access the DB
         // Disco local C > XAMPP
         // testSQL DB created
+        // Today's lesson is going to be seen tomorrow. 
     }
 }
