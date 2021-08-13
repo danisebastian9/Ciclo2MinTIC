@@ -1,6 +1,6 @@
 ## This is the mySQL learning path. 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+We are going to use mySQL through VS Code and Xampp in order to be able to create the DB and tables. 
 
 ## Folder Structure
 
