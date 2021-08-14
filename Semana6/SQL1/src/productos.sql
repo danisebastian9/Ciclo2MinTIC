@@ -8,3 +8,10 @@ CREATE TABLE productos(
     Categoria VARCHAR(100) NOT NULL
 );
 
+DROP TABLE productos;
+
+-- Insertar datos desde Archivo.csv
+LOAD DATA infile 'C:\\Users\\sebas\\Documents\\Development\\MinTic\\Ciclo2MinTIC\\Semana6\\SQL1\\src\\Productos - Hoja 1.csv'
+INTO TABLE productos
+fields terminated BY ','
+lines terminated BY '\r\n';
