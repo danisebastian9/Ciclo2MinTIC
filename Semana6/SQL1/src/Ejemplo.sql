@@ -38,7 +38,10 @@ SELECT * from libro; -- Muestra todos los libros
 SELECT codigoLibro, titulo, editorial from libro; -- Muestra solo 3 filas especificas
 SELECT codigoLibro, titulo, editorial, autor from libro WHERE autor = "Maria"; -- Con criterio
 SELECT codigoLibro, titulo, editorial, autor from libro WHERE CodigoLibro = 1003 AND autor = "Maria";
-
+SELECT codigoLibro, titulo, editorial, autor from libro WHERE CodigoLibro BETWEEN 1002 AND 1020;
+SELECT * from libro WHERE fecha = '2000-02-15';
+SELECT * from libro WHERE fecha >= '2002-01-01';
+SELECT * from libro WHERE Subtitulo IS NULL;
 
 
 -- DCL - Lenguaje de control de datos - Seguridad de los datos
