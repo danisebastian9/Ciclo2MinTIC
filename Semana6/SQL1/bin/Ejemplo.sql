@@ -11,19 +11,37 @@ CREATE table libro(
     Titulo VARCHAR(100) NOT NULL,
     Subtitulo VARCHAR(100),
     Paginas int(4) NOT NULL,
-    ISBN VARCHAR(50) NOT NULL,
+    ISBN VARCHAR(50) NOT NULL UNIQUE, -- no se puede repetir, unico para cada linea
     Editorial VARCHAR(50) DEFAULT 'Planeta',
     Autor VARCHAR(50) NOT NULL
+    -- Fecha DATE '2020-02-15' Formato 'AAAA-MM-DD'
 );
 
 -- Estructura de la tabla
 describe libro;
 
-ALTER table libro add Precio int();
+ALTER table libro add fecha DATE;
 
 -- eliminar tabla -- Elimina datos
 DROP table libro;
 
 -- DML - Lenguaje de manipulacion de datos - CRUD 
+-- Insertar datos a tabla
+
+-- CREATE
+INSERT INTO libro (CodigoLibro, Titulo, Subtitulo, Paginas, ISBN, Editorial, Autor) VALUES ('1001', 'La Ciencia de lo Cotidiano', NULL, '500', 'Lib001', 'Norma', 'Anonimo');
+INSERT INTO libro (CodigoLibro, Titulo, Paginas, ISBN, Autor) VALUES (1002, 'Aprendiendo Java', 1500, 'Lib002', 'Pepito'); -- Insertar registros a la tabla
+INSERT INTO libro (CodigoLibro, Titulo, Paginas, ISBN, Autor, fecha) VALUES (1003, 'Aprendiendo SQL', 200, 'Lib003', 'Maria', '2000-02-15');
+
+-- READ
+SELECT * from libro; -- Muestra todos los libros
+SELECT codigoLibro, titulo, editorial from libro; -- Muestra solo 3 filas especificas
+SELECT codigoLibro, titulo, editorial, autor from libro WHERE autor = "Maria"; -- Con criterio
+SELECT codigoLibro, titulo, editorial, autor from libro WHERE CodigoLibro = 1003 AND autor = "Maria";
+SELECT codigoLibro, titulo, editorial, autor from libro WHERE CodigoLibro BETWEEN 1002 AND 1020;
+SELECT * from libro WHERE fecha = '2000-02-15';
+SELECT * from libro WHERE fecha >= '2002-01-01';
+SELECT * from libro WHERE Subtitulo IS NULL;
+
 
 -- DCL - Lenguaje de control de datos - Seguridad de los datos
