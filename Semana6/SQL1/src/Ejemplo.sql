@@ -27,9 +27,18 @@ DROP table libro;
 
 -- DML - Lenguaje de manipulacion de datos - CRUD 
 -- Insertar datos a tabla
+
+-- CREATE
 INSERT INTO libro (CodigoLibro, Titulo, Subtitulo, Paginas, ISBN, Editorial, Autor) VALUES ('1001', 'La Ciencia de lo Cotidiano', NULL, '500', 'Lib001', 'Norma', 'Anonimo');
 INSERT INTO libro (CodigoLibro, Titulo, Paginas, ISBN, Autor) VALUES (1002, 'Aprendiendo Java', 1500, 'Lib002', 'Pepito'); -- Insertar registros a la tabla
 
 INSERT INTO libro (CodigoLibro, Titulo, Paginas, ISBN, Autor, fecha) VALUES (1003, 'Aprendiendo SQL', 200, 'Lib003', 'Maria', '2000-02-15');
+
+-- READ
+
+SELECT * from libro; -- Muestra todos los libros
+SELECT codigoLibro, titulo, editorial from libro; -- Muestra solo 3 filas especificas
+SELECT codigoLibro, titulo, editorial, autor from libro WHERE autor = "Maria"; -- Con criterio
+
 
 -- DCL - Lenguaje de control de datos - Seguridad de los datos
