@@ -20,7 +20,7 @@ CREATE table libro(
 -- Estructura de la tabla
 describe libro;
 
-ALTER table libro add Precio int();
+ALTER table libro add fecha DATE;
 
 -- eliminar tabla -- Elimina datos
 DROP table libro;
@@ -30,5 +30,6 @@ DROP table libro;
 INSERT INTO libro (CodigoLibro, Titulo, Subtitulo, Paginas, ISBN, Editorial, Autor) VALUES ('1001', 'La Ciencia de lo Cotidiano', NULL, '500', 'Lib001', 'Norma', 'Anonimo');
 INSERT INTO libro (CodigoLibro, Titulo, Paginas, ISBN, Autor) VALUES (1002, 'Aprendiendo Java', 1500, 'Lib002', 'Pepito'); -- Insertar registros a la tabla
 
+INSERT INTO libro (CodigoLibro, Titulo, Paginas, ISBN, Autor, fecha) VALUES (1003, 'Aprendiendo SQL', 200, 'Lib003', 'Maria', '2000-02-15');
 
 -- DCL - Lenguaje de control de datos - Seguridad de los datos
