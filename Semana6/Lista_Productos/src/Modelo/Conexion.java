@@ -8,7 +8,7 @@ import java.sql.Connection;
 
 public class Conexion {
     private String bd = "lista_productos";
-    private String url = "jdbc:mysql//localhost:3306/"+ bd;  
+    private String url = "jdbc:mysql://localhost:3306/"+ bd;  
     private String user = "root";
     private String pass = "";
     Connection conec = null;

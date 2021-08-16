@@ -1,5 +1,8 @@
+import Modelo.Conexion;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        Conexion con = new Conexion();
+        con.Conecta();
     }
 }
