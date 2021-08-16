@@ -28,7 +28,7 @@ public class Inventario {
             ps.setString(1, p.getReferencia());
             ps.setString(2, p.getNombre());
             ps.setLong(3, p.getPrecio());
-            ps.setString(3, p.getCategoria());
+            ps.setString(4, p.getCategoria());
             resultado = ps.executeUpdate() > 0; // Actualiza datos en la DB
 
 
@@ -39,13 +39,18 @@ public class Inventario {
     }
 
     public Productos buscarProducto(String ref){ // Metodo buscar por referencia
-        //lista = arch.leerArchivo(arch.getArchivo());
         Productos z = null; 
-        for(Productos p:lista){
-            if(p.getReferencia().equals(ref)){
-                z = p; 
-                return p;
+        try {
+            String sql = "SELECT * FROM productos WHERE referencia = ?";
+            ps = conec.prepareStatement(sql);
+            ps.setString(1, ref);
+            res = ps.executeQuery(); // Trae datos de la tabla
+
+            while(res.next()){
+                z = new Productos(res.getString(1),res.getString(2),res.getLong(3), res.getString(4));
             }
+        } catch (SQLException e) {
+            System.out.println("Error al Consultar: "+ e);
         }
         return z; 
     }

@@ -36,6 +36,7 @@ public class Vista {
         long pre = 0;
         try{
             pre = ingreso.nextLong();
+            ingreso.nextLine();
         }catch(Exception ex){
             System.out.println("Error al ingresar el precio: " + ex.getMessage());
         }
