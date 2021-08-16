@@ -1,8 +1,9 @@
-import Modelo.Conexion;
+import Controlador.Controlador;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Conexion con = new Conexion();
-        con.Conecta();
+        Controlador con = new Controlador();
+        con.Control();
     }
 }

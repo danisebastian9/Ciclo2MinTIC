@@ -20,8 +20,10 @@ public class Controlador {
         while(opcion >= 1 && opcion <= 6){
             switch(opcion){
                 case 1 :
-                    Productos p = new Productos(vis.capturaRef(), vis.capturaNombre(), vis.capturaPrecio());
-                    lista.agregarProducto(p);
+                    Productos p = new Productos(vis.capturaRef(), vis.capturaNombre(), vis.capturaPrecio(), vis.capturaCategoria());
+                    if (lista.agregarProducto(p)){
+                        vis.imprimir("Se inserto el producto Correctamente");
+                    };
                     break;
                 case 2 :
                     mens = lista.buscarProducto(vis.capturaRef()).mostrarProducto();
