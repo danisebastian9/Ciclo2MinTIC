@@ -55,6 +55,22 @@ public class Inventario {
         return z; 
     }
 
+    public ArrayList<Productos> consultaTodos(){ // Consulta todos
+        try {
+           String sql = "SELECT * FROM productos";
+           st = conec.createStatement();
+           res = st.executeQuery(sql);
+           
+           while(res.next()){
+            Productos p = new Productos(res.getString(1),res.getString(2),res.getLong(3), res.getString(4));
+            lista.add(p);
+           }
+        } catch (SQLException e) {
+            System.out.println("Error al Consultar: "+ e);
+        }
+        return lista;
+    }
+
     public void modificarProducto(String ref, String nom, long pre){  // Metodo para Modificar
         //lista = arch.leerArchivo(arch.getArchivo());
         int contador = 0;

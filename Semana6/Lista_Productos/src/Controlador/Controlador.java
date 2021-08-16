@@ -36,7 +36,7 @@ public class Controlador {
                     lista.eliminarProducto(vis.capturaRef());
                 break;
                 case 5 :
-                //lista.setLista(arch.leerArchivo(arch.getArchivo()));;
+                    lista.setLista(lista.consultaTodos());
                     for(Productos prods: lista.getLista()){
                         vis.imprimir(prods.mostrarProducto());
                     }
