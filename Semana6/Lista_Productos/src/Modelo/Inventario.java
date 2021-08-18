@@ -88,11 +88,17 @@ public class Inventario {
         return resultado;
     }
 
-    public void eliminarProducto(String ref){  // Metodo para Eliminar
-        //lista = arch.leerArchivo(arch.getArchivo());
-        Productos p = this.buscarProducto(ref);
-        lista.remove(p);
-        //arch.escribirArchivo(lista, arch.getArchivo());
+    public boolean eliminarProducto(String ref){  // Metodo para Eliminar
+        boolean resultado = false;
+        try {
+            String sql = "DELETE FROM productos WHERE referencia = ?";
+            ps = conec.prepareStatement(sql);
+            ps.setString(1, ref);
+            resultado = ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            System.out.println("Error al Eliminar producto: "+ e);
+        }
+        return resultado;
     }
 
     public ArrayList<Productos> getLista() {
