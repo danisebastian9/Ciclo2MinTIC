@@ -71,16 +71,21 @@ public class Inventario {
         return lista;
     }
 
-    public void modificarProducto(String ref, String nom, long pre){  // Metodo para Modificar
-        //lista = arch.leerArchivo(arch.getArchivo());
-        int contador = 0;
-        for(Productos p:lista){
-            if(p.getReferencia().equals(ref)){
-                //lista.set(contador, new Productos(ref, nom, pre));
-            }
-            contador++;
+    public boolean modificarProducto(String ref, String nom, long pre, String categoria){  // Metodo para Modificar
+        boolean resultado = false; 
+        try {
+            String sql = "UPDATE productos SET nombre = ?, precio = ?, categoria = ? WHERE referencia = ?";
+            ps = conec.prepareStatement(sql);
+            ps.setString(1, nom);
+            ps.setLong(2, pre);
+            ps.setString(3, categoria);
+            ps.setString(4, ref);
+            resultado = ps.executeUpdate() > 0;
+
+        } catch (SQLException e) {
+            System.out.println("Error al Modificar: "+ e);
         }
-        //arch.escribirArchivo(lista, arch.getArchivo());
+        return resultado;
     }
 
     public void eliminarProducto(String ref){  // Metodo para Eliminar
