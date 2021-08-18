@@ -33,11 +33,15 @@ public class Controlador {
                     if(lista.modificarProducto(vis.capturaRef(), vis.capturaNombre(), vis.capturaPrecio(), vis.capturaCategoria())){
                         vis.imprimir("Se Actualizo Correctamente el Producto");
                     } else {
-                        vis.imprimir("Se Producto no se actualizo");
+                        vis.imprimir("El Producto no se actualizo");
                     }
                     break;
                 case 4 : 
-                    lista.eliminarProducto(vis.capturaRef());
+                    if(lista.eliminarProducto(vis.capturaRef())){
+                        vis.imprimir("Se Elimino Correctamente el Producto");
+                    }else{
+                        vis.imprimir("El Producto no se Elimino");
+                    }
                 break;
                 case 5 :
                     lista.setLista(lista.consultaTodos());
