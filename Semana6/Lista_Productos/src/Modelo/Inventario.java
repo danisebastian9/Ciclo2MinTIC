@@ -77,7 +77,7 @@ public class Inventario {
             String sql = "UPDATE productos SET nombre = ?, precio = ?, categoria = ? WHERE referencia = ?";
             ps = conec.prepareStatement(sql);
             ps.setString(1, nom);
-            ps.setLong(2, pre);
+            ps.setDouble(2, pre);
             ps.setString(3, categoria);
             ps.setString(4, ref);
             resultado = ps.executeUpdate() > 0;
