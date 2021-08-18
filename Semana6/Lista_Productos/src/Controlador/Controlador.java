@@ -26,8 +26,13 @@ public class Controlador {
                     };
                     break;
                 case 2 :
-                    mens = lista.buscarProducto(vis.capturaRef()).mostrarProducto();
-                    vis.imprimir(mens);
+                Productos b = lista.buscarProducto(vis.capturaRef());
+                    if(b != null){
+                        mens = b.mostrarProducto();
+                        vis.imprimir(mens);
+                    } else {
+                        vis.imprimir("No se encontro el producto");
+                    }
                     break;
                 case 3 :
                     if(lista.modificarProducto(vis.capturaRef(), vis.capturaNombre(), vis.capturaPrecio(), vis.capturaCategoria())){
