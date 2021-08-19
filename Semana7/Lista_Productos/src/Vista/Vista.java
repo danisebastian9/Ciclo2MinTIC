@@ -1,57 +1,55 @@
 package Vista;
 
-import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 
 public class Vista {
-
-    Scanner ingreso = new Scanner(System.in); 
     
     public byte mostrarMenu(){
         byte op = 0;
-
-        System.out.println("Menu inventario de Productos \n1. Crear Producto \n2. Buscar Producto \n3. Modificar Producto \n4. Eliminar Producto \n5. Listar Productos \n6. Salir \nOpcion: " );
-        op = ingreso.nextByte();
+        String opcion[] = {"Añadir","Consultar","Modificar","Eliminar","Todos","Salir"};
+        int op1 = JOptionPane.showOptionDialog(null, "Seleccione: ", "Menu inventario de Productos", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null,opcion, opcion[0]);
+        op1 +=1;
+        op = (byte)op1;
         return op;
     }
 
     public String capturaRef(){
-        System.out.println("Ingrese referencia del producto");
         String ref = "";
-        ref = ingreso.next();
-        ingreso.nextLine();
+        ref = JOptionPane.showInputDialog(null, "Ingrese referencia del producto");
         return ref;
         
     }
 
     public String capturaNombre(){
-        System.out.println("Ingrese Nombre del producto");
         String nom = "";
-        nom = ingreso.nextLine();
+        nom = JOptionPane.showInputDialog(null, "Ingrese Nombre del producto");
         return nom;
 
     }
 
     public long capturaPrecio(){
-        System.out.println("Ingrese Precio del producto");
         long pre = 0;
         try{
-            pre = ingreso.nextLong();
-            ingreso.nextLine();
+            pre = Long.parseLong(JOptionPane.showInputDialog(null, "Ingrese Precio del producto"));
         }catch(Exception ex){
-            System.out.println("Error al ingresar el precio: " + ex.getMessage());
+            JOptionPane.showMessageDialog(null,"Error al ingresar el precio: " + ex.getMessage());
         }
         return pre;
     }
 
     public String capturaCategoria(){
-        System.out.println("Ingrese Categoria del producto");
         String nom = "";
-        nom = ingreso.nextLine();
+        nom = JOptionPane.showInputDialog(null, "Ingrese Categoria del producto");
         return nom;
 
     }
 
     public void imprimir(String mensaje){
-        System.out.println(mensaje);
+        JOptionPane.showMessageDialog(null, mensaje);
+    }
+
+    public void imprimirTodos(String mensaje){
+        System.out.println(mensaje);;
     }
 }

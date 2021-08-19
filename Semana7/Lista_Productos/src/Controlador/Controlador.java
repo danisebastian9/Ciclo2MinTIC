@@ -1,5 +1,7 @@
 package Controlador;
 
+import javax.swing.JOptionPane;
+
 //import Modelo.Archivo;
 import Modelo.Inventario;
 import Modelo.Productos;
@@ -42,16 +44,21 @@ public class Controlador {
                     }
                     break;
                 case 4 : 
-                    if(lista.eliminarProducto(vis.capturaRef())){
-                        vis.imprimir("Se Elimino Correctamente el Producto");
-                    }else{
-                        vis.imprimir("El Producto no se Elimino");
+                    String ref = vis.capturaRef();
+                    int si = JOptionPane.showConfirmDialog(null, "Desea eliminar el producto " + ref +"?");
+                    if(si == 0){
+                        if(lista.eliminarProducto(ref)){
+                            vis.imprimir("Se Elimino Correctamente el Producto");
+                        }else{
+                            vis.imprimir("El Producto no se Elimino");
+                        }
                     }
+
                 break;
                 case 5 :
                     lista.setLista(lista.consultaTodos());
                     for(Productos prods: lista.getLista()){
-                        vis.imprimir(prods.mostrarProducto());
+                        vis.imprimirTodos(prods.mostrarProducto());
                     }
                     break;
                 case 6 : 
