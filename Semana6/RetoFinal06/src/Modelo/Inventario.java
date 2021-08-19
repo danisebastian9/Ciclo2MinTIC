@@ -63,6 +63,7 @@ public class Inventario {
             ps.setLong(2, numCel);
             ps.setLong(3, numFijo);
             ps.setString(4, prog);
+            ps.setString(5, iEmail);
             resultado = ps.executeUpdate() > 0;
 
         } catch (SQLException e) {

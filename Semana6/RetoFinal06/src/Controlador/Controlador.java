@@ -1,6 +1,5 @@
 package Controlador;
 
-//import Modelo.Archivo;
 import Modelo.Estudiantes;
 import Modelo.Inventario;
 import Vista.Vista;
@@ -9,7 +8,6 @@ public class Controlador {
     
     Vista vis = new Vista();
     Inventario lista = new Inventario();
-    //Archivo  arch = new Archivo();
 
     public void Control(){
         byte opcion = 0;
