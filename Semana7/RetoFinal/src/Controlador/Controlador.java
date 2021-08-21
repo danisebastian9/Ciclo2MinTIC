@@ -58,7 +58,7 @@ public class Controlador {
                 vis.imprimir("El directorio de los estudiantes\n");
                 lista.setLista(lista.consultaTodos());
                 for(Estudiantes estu: lista.getLista()){
-                    vis.imprimir(estu.mostrarProducto2());
+                    vis.imprimirTodos(estu.mostrarProducto2());
                 }
                 break;
                 case 6:

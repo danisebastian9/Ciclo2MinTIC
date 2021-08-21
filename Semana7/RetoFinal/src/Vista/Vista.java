@@ -93,4 +93,8 @@ public class Vista {
     public void imprimir(String mensaje){
         JOptionPane.showMessageDialog(null, mensaje);
     }
+
+    public void imprimirTodos(String mensaje){
+        System.out.println(mensaje);;
+    }
 }
