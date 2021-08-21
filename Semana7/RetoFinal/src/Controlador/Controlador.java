@@ -1,5 +1,6 @@
 package Controlador;
 
+import javax.swing.JOptionPane;
 import Modelo.Estudiantes;
 import Modelo.Inventario;
 import Vista.Vista;
@@ -43,10 +44,14 @@ public class Controlador {
                 break;
                 case 4:
                     vis.imprimir("Eliminar estudiante");
-                    if(lista.eliminarEstudiante(vis.capturaInstEmail())){
-                        vis.imprimir("Se eliminó el estudiante\n");
-                    } else{
-                        vis.imprimir("El Estudiante no se Eliminó");
+                    String iEmail = vis.capturaInstEmail();
+                    int si = JOptionPane.showConfirmDialog(null, "Desea eliminar el producto " + iEmail +"?");
+                    if(si == 0){
+                        if(lista.eliminarEstudiante(iEmail)){
+                            vis.imprimir("Se eliminó el estudiante\n");
+                        } else{
+                            vis.imprimir("El Estudiante no se Eliminó");
+                        }
                     }
                     break;
                 case 5: 

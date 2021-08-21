@@ -28,7 +28,7 @@ public class Controlador {
                     };
                     break;
                 case 2 :
-                Productos b = lista.buscarProducto(vis.capturaRef());
+                    Productos b = lista.buscarProducto(vis.capturaRef());
                     if(b != null){
                         mens = b.mostrarProducto();
                         vis.imprimir(mens);
