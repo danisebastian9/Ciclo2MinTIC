@@ -13,8 +13,8 @@ public class Conexion {
     public Connection Conecta(){
 
         try {
-            //conec = DriverManager.getConnection(url, user, pass);
-            conec = DriverManager.getConnection("jdbc:sqlite:bd_estudiantes.db");
+            conec = DriverManager.getConnection(url, user, pass);
+            //conec = DriverManager.getConnection("jdbc:sqlite:bd_estudiantes.db");
             //System.out.println("Conexion ok....");
         } catch (SQLException e) {
             System.out.println("No se pudo conectar..." + e);
